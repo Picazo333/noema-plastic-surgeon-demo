@@ -1,0 +1,106 @@
+noema:
+  protocol: "0.1.0-rc.0"
+  contracts:
+    project_manifest: 1
+
+project:
+  id: noema-plastic-surgeon-demo
+  name: VERTICE Plastic Surgery Demo
+  type: application
+  status: experimental
+
+traits:
+  - deterministic
+  - creative
+  - visual
+  - customer-facing
+  - sensitive
+  - publishable
+  - human-gated
+
+authority:
+  owns:
+    - static-site-code
+    - demo-copy
+    - visual-system
+    - demo-business-plan
+    - demo-funnel-model
+    - quality-evidence
+  does_not_own:
+    - medical-advice
+    - clinical-decision-making
+    - physician-credentials
+    - patient-data
+    - legal-compliance
+    - secrets
+    - large-media
+
+sources_of_truth:
+  site_spec:
+    scheme: repo
+    locator: docs/SITE_SPEC.md
+  brand_system:
+    scheme: repo
+    locator: docs/BRAND_SYSTEM.md
+  business_plan:
+    scheme: repo
+    locator: docs/BUSINESS_PLAN.md
+  compliance:
+    scheme: repo
+    locator: docs/COMPLIANCE.md
+  quality_gate:
+    scheme: repo
+    locator: validation/QUALITY_GATE.md
+  references:
+    scheme: repo
+    locator: docs/REFERENCES.md
+
+context:
+  entrypoint: AGENTS.md
+  default_mode: build
+  modes:
+    patch:
+      required:
+        - repo://docs/SITE_SPEC.md
+    build:
+      required:
+        - repo://docs/SITE_SPEC.md
+        - repo://docs/BRAND_SYSTEM.md
+    audit:
+      required:
+        - repo://validation/QUALITY_GATE.md
+        - repo://docs/COMPLIANCE.md
+    research:
+      required:
+        - repo://docs/BUSINESS_PLAN.md
+        - repo://docs/COMPLIANCE.md
+      optional:
+        - repo://docs/REFERENCES.md
+    architect:
+      required:
+        - repo://docs/ARCHITECTURE.md
+        - repo://docs/SITE_SPEC.md
+    recover:
+      required:
+        - repo://README.md
+        - repo://validation/NOEMA_TRACE.md
+      optional:
+        - repo://docs/PROCESS_LOG.md
+
+quality_claims:
+  - contract-conformance
+  - context-efficiency
+  - provenance
+  - security-boundaries
+  - visual-coherence
+  - research-groundedness
+  - delivery-integrity
+
+relations:
+  - type: governed-by
+    target: project:noema
+
+exceptions: []
+extensions:
+  x-demo-domain: elective-plastic-surgery
+  x-public-surface: github-pages
