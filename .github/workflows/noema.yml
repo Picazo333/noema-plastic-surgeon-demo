@@ -7,6 +7,6 @@ on:
 
 jobs:
   noema:
-    uses: Picazo333/noema/.github/workflows/reusable-conformance.yml@769a84efa0c1489d24a2b6f9879697d8ecae166a
+    uses: Picazo333/noema/.github/workflows/reusable-conformance.yml@5fa715b90aabd23715b0a15fad4b9538d1e55a95
     with:
       project_root: "."

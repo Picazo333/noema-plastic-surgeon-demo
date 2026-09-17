@@ -1,49 +1,39 @@
-# Local Test Report — Professional Demo
+# Final Test Report — Noema Reference Consumer
 
 **Date:** 2026-09-17  
-**Scope:** static site + Noema consumer structure before remote publication.
+**Scope:** static site + first external greenfield Noema consumer.
 
-## Result
+## Final status
 
-**PASS locally.** Exact Noema conformance and GitHub Pages deployment remain remote gates and will run once the repository exists on GitHub.
+The demo completed its intended role as a protocol consumer. Design work is frozen; the repository is retained as reference evidence for Noema.
 
 | Gate | Result | Evidence |
 |---|---|---|
-| Public pages present | PASS | landing, business plan, Noema case study |
-| Internal links + anchors | PASS | deterministic parser |
-| Demo disclosure | PASS | all three public primary pages |
-| Form outbound endpoint | PASS | none |
-| Network APIs | PASS | none in public JS |
-| Browser persistence APIs | PASS | none |
-| Prohibited guarantee/superlative patterns | PASS | static scan |
-| JS syntax | PASS | `node --check site/app.js` |
-| Agent entrypoint budget | PASS | 142 words (~189-token heuristic) |
-| Noema context refs | PASS | no missing `repo://` paths |
-| Noema source locators | PASS | no missing source-of-truth paths |
-| External runtime assets | PASS | 0 |
-| Static public payload | PASS | ~35 KB before compression |
-| Main text contrast | PASS | Ink/Paper 17.0:1 |
-| Accent contrast | PASS | Oxblood/Paper 10.3:1 |
-| CTA contrast | PASS | White/Oxblood 10.9:1 |
-| Reduced motion path | PASS | CSS `prefers-reduced-motion` |
-| GitHub Pages workflow pattern | PASS | aligned to current official GitHub Pages action versions |
-| Noema reusable workflow | READY | pinned to immutable Noema main commit containing hardened consumer workflow |
+| Static quality gate | PASS | `python tests/test_static.py` and GitHub Pages validate job |
+| Noema conformance | PASS | reusable Noema workflow on hardened RC0 |
+| Internal links / anchors | PASS | deterministic parser |
+| Demo disclosure | PASS | all primary public pages |
+| Data transmission / persistence | PASS | no form endpoint, network API, cookies or browser persistence |
+| Noema progressive context | PASS | mode-routed manifest + small agent entrypoint |
+| GitHub Pages deploy | PASS | custom `pages.yml` artifact deployment |
+| Live site | PASS | `https://picazo333.github.io/noema-plastic-surgeon-demo/` |
 
-## Edge case found during this build
-The first prohibited-claims check flagged a negative sentence containing the words “resultados garantizados.” The copy was rewritten to “Sin promesas de resultado,” preventing a false positive without weakening the safety boundary.
+## Remote evidence observed before final repin
 
-## Visual QA
-Desktop preview renders show:
-- editorial hierarchy remains legible;
-- the custom profile illustration is coherent with the brand territory;
-- business-plan and Noema case-study pages use the same system;
-- no external image/font dependency is required.
+- Noema Conformance run `35272563625`: PASS.
+- Deploy GitHub Pages run `35272562522`: PASS.
+- The same commit also produced a dynamic GitHub `pages build and deployment` run. This exposed an external-platform configuration edge case rather than a Noema defect.
 
-The repository ships responsive CSS down to 320 px. Browser-level responsive verification will be repeated in GitHub/real browser after publication.
+## Canonical delivery authority
 
-## Remote exit criteria
-1. Noema conformance workflow PASS.
-2. Static quality workflow PASS.
-3. GitHub Pages deployment PASS.
-4. Live desktop/mobile smoke review PASS.
-5. Record final live URL + workflow runs in this report.
+`.github/workflows/pages.yml` is the intended deployment workflow and uploads only `site/`. The root `index.html` redirect is retained as a defensive compatibility fallback for the earlier branch/dynamic Pages behavior; it is not the canonical build source.
+
+## Harvest outcomes
+
+The first consumer originally exposed six validator defects plus one CI reproducibility issue; all were fixed and regression-tested in Noema. The subsequent 100-pass harvest produced a second bounded hardening package covering context measurement, optional-reference validation, per-mode reporting, scaffold single-source behavior, reproducible CI, and Harvest evidence/ID ergonomics.
+
+No Noema architecture expansion was justified. WorkOrders, handoffs, eval evidence aggregation, multi-agent recovery, executor routing, and external storage remain intentionally deferred for Skill Foundry, the next complex consumer.
+
+## Closure
+
+This report supersedes the earlier pre-publication wording that remote gates were still pending. Future changes to this repo should be limited to reference-evidence maintenance or compatibility fixes unless the demo is explicitly reopened for another experiment.

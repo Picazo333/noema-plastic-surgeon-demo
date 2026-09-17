@@ -38,4 +38,14 @@ Then open `http://localhost:8000`.
 python tests/test_static.py
 ```
 
-Remote CI additionally runs Noema's pinned reusable conformance workflow.
+Remote CI additionally runs Noema's immutable reusable conformance workflow.
+
+## Delivery authority
+
+`.github/workflows/pages.yml` is the canonical GitHub Pages deployment path and publishes only `site/`. The root redirect exists only as a compatibility fallback for an earlier Pages configuration edge case.
+
+Live reference consumer: `https://picazo333.github.io/noema-plastic-surgeon-demo/`.
+
+## Status
+
+**Frozen reference consumer.** The design is not being iterated further. This repository exists to preserve evidence from Noema's first greenfield external implementation and its subsequent harvest/hardening cycle.

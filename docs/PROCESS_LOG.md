@@ -4,7 +4,7 @@
 Defined the project as an experimental `application` consumer with visual, sensitive, customer-facing and human-gated traits. Declared medical/legal/patient-data domains explicitly outside repository authority.
 
 ## 2. Progressive context
-Created a 142-word `AGENTS.md` entrypoint and routed task modes to focused documents instead of requiring full-repo reading.
+Created a deliberately small `AGENTS.md` entrypoint and routed task modes through `noema.project.yaml` instead of requiring full-repo reading. Exact routing authority remains in the manifest; `AGENTS.md` is an explanation/entry map.
 
 ## 3. Business / content layer
 Created a fictional 90-day plan, funnel model and KPI set. All numeric inputs are labeled assumptions rather than forecasts.
@@ -19,4 +19,13 @@ Kept forms local-only, prohibited tracking/storage/network APIs, removed real cr
 Added checks for broken internal links/anchors, outbound form endpoints, runtime network/storage APIs, prohibited marketing claims, agent-entrypoint budget and Noema default-mode presence.
 
 ## 7. Delivery
-Prepared separate workflows for Noema conformance and GitHub Pages deployment. The consumer workflow is immutably pinned to the hardened Noema commit path.
+Separated Noema conformance from GitHub Pages delivery. The canonical deployment workflow is `.github/workflows/pages.yml`, which publishes only `site/`. Pages visibility/enablement remained a human/platform authority boundary.
+
+## 8. External consumer hardening
+The first adversarial pass found six Noema validator edge cases and one CI reproducibility issue. They were fixed in Noema and protected by regression coverage without changing RC0 architecture.
+
+## 9. Exhaustive harvest
+A subsequent 100-pass review challenged context accounting, optional refs, scaffolding, CI latency/reproducibility, Harvest behavior, documentation drift, deployment authority, and future scaling. The accepted Hardening II package remained bounded to measurement/tooling/documentation changes.
+
+## 10. Closure
+The demo is now a frozen reference consumer. No further design work is planned. The next Noema experiment is the measured selective migration of Skill Foundry; Agency Foundation remains deferred until its active work reaches a stable checkpoint.
