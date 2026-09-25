@@ -23,3 +23,6 @@ Expected cold-start behavior:
 
 ## Observed learning target
 If this project stays understandable, auditable and deployable without agents bulk-reading the repo, progressive context is working as intended.
+
+## RC0 CI gate
+The pinned reusable Noema workflow runs both `noema lint .` and `noema audit .` on pull requests. The static product gate remains `python tests/test_static.py`; conformance does not assert medical, visual or product approval.
